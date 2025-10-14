@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | ShutterShare Rentals</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="dashboard-layout">
+        <aside class="dashboard-sidebar">
+            <div class="sidebar-header">
+                <a href="/" class="logo">ShutterShare<span>.</span></a>
+            </div>
+            <div class="user-profile">
+                <div class="user-avatar">[AVATAR]</div>
+                <h3 class="user-name"><%= fetchname%></h3>
+                <p class="user-email">WELCOME!</p>
+            </div>
+            <nav class="dashboard-nav">
+                <ul>
+                    <li><a href="/dashboard" class="active">Dashboard</a></li>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/products">Gear</a></li>
+                    <li><a href="/contact">Contacts</a></li>
+                </ul>
+            </nav>
+            <div class="sidebar-footer">
+                <a href="/logout">Logout</a>
+            </div>
+        </aside>
+
+        <main class="dashboard-content">
+                <section class="rental-list">
+                <h2>Your Active Rentals</h2>
+                <div class="rental-item">
+                    <div class="item-details">
+                        <h4>Sony a7 IV</h4>
+                        <p>Rented on: 20 Sep, 2025</p>
+                    </div>
+                    <div class="rental-period">
+                        <p><strong>Due:</strong> 28 Sep, 2025 (5 days left)</p>
+                    </div>
+                    <div class="item-actions">
+                        <a href="#" class="btn btn-secondary">View Details</a>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="form-section">
+                <h2>Add New Product to Inventory</h2>
+                <form class="form-grid" method="post" action="/dashboard" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label for="product-name">Product Name</label>
+                        <input type="text" id="product-name" name="productName" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="product-category">Category</label>
+                        <select id="product-category" name="productCategory" class="form-control" required>
+                            <option value="">Select Category...</option>
+                            <option value="camera">Camera Body</option>
+                            <option value="lens">Lens</option>
+                            <option value="drone">Drone</option>
+                            <option value="accessory">Accessory</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="product-price">Price per Day (₹)</label>
+                        <input type="number" id="product-price" name="productPrice" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="productImage">Product Image</label>
+                        <input type="file" id="productImage" name="productImage" accept="image/*" required class="form-control">
+                    </div>
+                    <div class="form-group form-group-full">
+                        <label for="product-description">Description</label>
+                        <textarea id="product-description" name="productDescription" rows="4" class="form-control"></textarea>
+                    </div>
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary">Add Product</button>
+                    </div>
+                </form>
+            </section>
+            </main>
+    </div>
+
+</body>
+</html>

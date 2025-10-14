@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | ShutterShare Rentals</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+       <%- include('includes/header')%>
+    <main>
+        <div class="login-container">
+            <h1>Log In</h1>
+            <form class="login-form" action="/login" method="POST">
+
+                
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" class="form-control" required>
+                </div>
+                
+                <% errors.forEach(errors=>{%>
+                    <p style="color:red;"><%=errors %></p>
+              <% }) %>
+
+                <button type="submit" class="btn btn-primary">Sign In</button>
+            </form>
+            <div class="form-links">
+                <!-- <a href="#">Forgot Password?</a> -->
+                <a href="/register">Don't have an account?  Sign Up</a>
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>
