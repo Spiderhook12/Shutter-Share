@@ -215,10 +215,9 @@ This is a college project, but contributions are welcome:
 
 This project is licensed under the ISC License - see the package.json file for details.
 
-## 👨‍💻 Author
+## 👨‍💻 Authors
 
-**Chirag Sharma**
-- Email: csharma162005@gmail.com
+**Chirag Sharma, Arnav Khot, Sudhir Gurudu**
 - Project: College Assignment
 
 ## 🙏 Acknowledgments
@@ -231,6 +230,7 @@ This project is licensed under the ISC License - see the package.json file for d
 
 For support or questions about this project, please contact:
 - Email: chiragps2005@gmail.com
+- khotarnav6@gmail.com
 - Or use the contact form on the website
 
 ---
